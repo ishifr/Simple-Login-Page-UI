@@ -83,20 +83,43 @@ class LoginPage extends StatelessWidget {
                     child: Column(
                   children: [
                     TextFormField(
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
                       decoration: InputDecoration(
-                        prefix:const Text(
-                          "Email",
-                          style: TextStyle(
-                            color: Colors.white,
+                        contentPadding:
+                         const   EdgeInsets.symmetric(vertical: 6, horizontal: 6),
+                        prefixIcon:const Padding(
+                          padding:  EdgeInsets.all(12.0),
+                          child: Text(
+                            "Email",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18.0,
+                            ),
                           ),
                         ),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide:const BorderSide(
+                              color: Colors.white,
+                            )),
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15.0)),
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide:const BorderSide(
+                              color: Colors.white,
+                              width: 4.0,
+                            )),
                       ),
                     ),
                     TextFormField(
                       decoration: InputDecoration(
-                        border: OutlineInputBorder(),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide: BorderSide(
+                              color: Colors.white,
+                            )),
                       ),
                     ),
                   ],
