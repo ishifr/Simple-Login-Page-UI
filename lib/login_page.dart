@@ -80,50 +80,141 @@ class LoginPage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(
                     horizontal: _w / 20, vertical: _h / 20),
                 child: Form(
-                    child: Column(
-                  children: [
-                    TextFormField(
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                      ),
-                      decoration: InputDecoration(
-                        contentPadding:
-                         const   EdgeInsets.symmetric(vertical: 6, horizontal: 6),
-                        prefixIcon:const Padding(
-                          padding:  EdgeInsets.all(12.0),
-                          child: Text(
-                            "Email",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18.0,
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                        decoration: InputDecoration(
+                          contentPadding: const EdgeInsets.symmetric(
+                              vertical: 6, horizontal: 6),
+                          prefixIcon: const Padding(
+                            padding: EdgeInsets.only(
+                              left: 12.0,
+                              top: 12,
+                              right: 65,
+                            ),
+                            child: Text(
+                              "Email",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18.0,
+                              ),
                             ),
                           ),
+                          hintText: "Example@gmail.com",
+                          hintStyle: TextStyle(color: Colors.grey[400]),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                              borderSide: const BorderSide(
+                                color: Colors.white,
+                              )),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                              borderSide: const BorderSide(
+                                color: Colors.white,
+                                width: 4.0,
+                              )),
                         ),
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                            borderSide:const BorderSide(
-                              color: Colors.white,
-                            )),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                            borderSide:const BorderSide(
-                              color: Colors.white,
-                              width: 4.0,
-                            )),
+                      ),
+                      SizedBox(
+                        height: _h / 17,
+                      ),
+                      TextFormField(
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                        obscureText: true,
+                        obscuringCharacter: "*",
+                        decoration: InputDecoration(
+                          contentPadding: const EdgeInsets.symmetric(
+                              vertical: 6, horizontal: 6),
+                          prefixIcon: const Padding(
+                            padding: EdgeInsets.only(
+                              left: 12.0,
+                              top: 12,
+                              right: 30,
+                            ),
+                            child: Text(
+                              "Password",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          ),
+                          hintText: "*******",
+                          hintStyle:
+                              TextStyle(color: Colors.grey[300], fontSize: 18),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                              borderSide: const BorderSide(
+                                color: Colors.white,
+                              )),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                              borderSide: const BorderSide(
+                                color: Colors.white,
+                                width: 4.0,
+                              )),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white,
+                        fixedSize: Size(_w / 3, _h / 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12.0),
+                        ),
+                      ),
+                      child: const Text(
+                        "Login",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                     ),
-                    TextFormField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                            borderSide: BorderSide(
-                              color: Colors.white,
-                            )),
-                      ),
+                    SizedBox(
+                      height: 10.0,
                     ),
+                    const Text(
+                      "Forget password",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    )
                   ],
-                )),
+                ),
+              ),
+              Container(
+                height: _h / 7.9,
+                alignment: Alignment.bottomCenter,
+                child: RichText(
+                  textAlign: TextAlign.center,
+                  text: const TextSpan(children: [
+                    TextSpan(
+                      text: "Don't hava a account.",
+                    ),
+                    TextSpan(
+                        text: " Sign up.",
+                        style: TextStyle(color: Colors.blue)),
+                  ]),
+                ),
               )
             ],
           ),
